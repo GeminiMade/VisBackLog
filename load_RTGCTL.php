@@ -18,18 +18,21 @@ $s = "Select * from BLR.TNS";
 $r = db2_exec($con, $s);
 while ($row = db2_fetch_assoc($r)){
     $ctlid = $row['CTLID'];
+    echo "<h5>$ctlid</h5>";
+    $scan = $row['FSCAN'];
+    $std = $row['STNSTR'];
     // get the warehouehouses associated with the group ID 
     $s1 = "Select * from BLR.DGRPD where grpid = $ctlid";
     $r1 = db2_exec($con, $s1);
     while ($row1 = db2_fetch_assoc($r1)){
         $whs = $row1['WHS'];
-        $scan = $row['FROMSCAN'];
-        $std = $row['x'];
+       
+        echo "<br>$whs $scan, $seq";
         $s2 = "Merge into RTGCTL t using table(values(
 $cntrlid, $lvlid, $whs, '$cls', '$optn', '$item', '$scan', $seq,$std)) s 
 (CTLID, LVLID, WHS, CLS, OPTN, ITEM, SCAN, SEQ, STDPRD) on
 s.WHS = t.WHS and s.SCAN = t.SCAN  
-When not matched insert
+When not matched then insert
  values(s.CTLID, s.LVLID, s.WHS, s.CLS, s.OPTN, s.ITEM, s.SCAN, s.SEQ, s..STDPRD) 
 with NC";
         $r2 = db2_exec($con, $s2);
