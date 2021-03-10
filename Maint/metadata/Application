@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation"
+        ],
+        "models": [
+            "modelRtgCtl",
+            "modelRtgLvl"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "storeRtgCtl",
+            "storeDB",
+            "storeRtgLvl"
+        ],
+        "views": [
+            "MainView"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

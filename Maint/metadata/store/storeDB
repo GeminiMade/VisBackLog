@@ -1,0 +1,65 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "{",
+            "\"id\": \"TS\",",
+            "\"text\": \"Testing/Development\"",
+            "},",
+            "{",
+            "\"id\": \"GI\",",
+            "\"text\": \"Production\"",
+            "}",
+            "]"
+        ],
+        "designer|userClassName": "storeDB",
+        "storeId": "storeDB"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "3dab4685-f5f8-4788-9f65-7b3c97ccebf4",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField",
+            "designerId": "9f0005ee-663e-48ef-ae20-670166bfa07d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField1",
+            "designerId": "2fe37afd-03a3-4150-89d2-4b4109e9bd14"
+        }
+    ]
+}

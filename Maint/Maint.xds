@@ -1,0 +1,67 @@
+{
+    "name": "Maint",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "7.1.0.16",
+            "frameworkVersion": "7.1.0.48"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost:10102/",
+        "exportPath": "",
+        "lockUrlPrefix": true,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "sdkPath": "",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app",
+            "buildPlatform": false
+        }
+    },
+    "xdsVersion": "4.2.7",
+    "xdsBuild": 430,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext71",
+    "viewOrderMap": {
+        "view": [
+            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+            "e06398df-21db-494a-8ccf-784239a17dcd",
+            "e0b7feb2-75c1-4538-ad8b-f4ba408c7b59"
+        ],
+        "store": [
+            "feafd5e7-ab6d-49a5-b1a1-c20656d50df8",
+            "82690434-8e7a-436a-87ab-9c40a540cbfc",
+            "3dab4685-f5f8-4788-9f65-7b3c97ccebf4"
+        ],
+        "controller": [
+            "02e19093-9c6b-4222-8b96-2632f82d7303"
+        ],
+        "model": [
+            "1c439fa0-f8d0-4f5f-8b01-36b3f243562b",
+            "a8c283fb-2d06-4bd8-93fd-3f4f27b70e39"
+        ],
+        "resource": [
+            "6f6e61ea-08f9-47d2-8743-f80e19a6fe23",
+            "efa3151d-f411-416b-a78d-276e3b22783a",
+            "c64cbeaa-8a4b-4074-bd25-364524941d6f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

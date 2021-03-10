@@ -1,0 +1,85 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userClassName": "storeRtgCtl",
+        "model": "modelRtgCtl",
+        "storeId": "storeRtgCtl"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "autoSync": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonPStore",
+    "designerId": "feafd5e7-ab6d-49a5-b1a1-c20656d50df8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://erpdc:10080/Gemini/VisBackLog/RtgCtl.PHP"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "eb8976ad-26de-40cd-ac5f-d66f2109d79b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "root"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "35c4af45-8c2c-4267-9aa5-55d56ae1c1e0"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonpstoreBeforeLoad",
+                "implHandler": [
+                    "db = Ext.getCmp('db').getValue();",
+                    "store.proxy.extraParams = { DB : db};"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onJsonpstoreBeforeLoad",
+            "designerId": "4c2e4048-5613-44a4-8ea7-686453c40786"
+        }
+    ]
+}
